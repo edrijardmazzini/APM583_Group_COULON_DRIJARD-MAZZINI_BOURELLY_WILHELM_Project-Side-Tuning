@@ -1,0 +1,32 @@
+[
+  {
+    "name": "side_small",
+    "description": "Side=Small  (~40k params)  | Base=RN18 | Merge=Alpha",
+    "val_acc": 78.14999999999999,
+    "val_loss": 0.007457194849848747,
+    "train_acc": 76.5,
+    "n_params": 53699,
+    "alpha": 0.508573591709137,
+    "time": 9
+  },
+  {
+    "name": "side_medium",
+    "description": "Side=Medium (~160k params) | Base=RN18 | Merge=Alpha  \u2190 r\u00e9f\u00e9rence",
+    "val_acc": 78.95,
+    "val_loss": 0.007520916871726513,
+    "train_acc": 75.2,
+    "n_params": 160323,
+    "alpha": 0.5127572417259216,
+    "time": 7
+  },
+  {
+    "name": "side_large",
+    "description": "Side=Large  (~600k params) | Base=RN18 | Merge=Alpha",
+    "val_acc": 77.5,
+    "val_loss": 0.007700805086642504,
+    "train_acc": 79.88333333333333,
+    "n_params": 1094915,
+    "alpha": 0.5034820437431335,
+    "time": 13
+  }
+]

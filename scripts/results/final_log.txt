@@ -1,0 +1,43 @@
+=================================================================
+  BENCHMARK FINAL — Adapter vs Finetune vs Sidetune
+  Méthodes      : ['adapter', 'finetune', 'sidetune']
+  Epochs        : 10
+  Train subset  : 50000
+  Val subset    : 2000
+  Device        : cuda
+=================================================================
+
+─────────────────────────────────────────────────────────────────
+  [ADAPTER]  Adapter Layers  bottleneck=64  après chaque stage RN50
+  Trainable params : 507,394
+─────────────────────────────────────────────────────────────────
+  ✓ train=93.83%  val=88.40%  loss=0.0065  1026s
+  Checkpoint → C:\Users\user\Desktop\3A\0 - P2\APM583 Deep Learning\Project_SIDE-TUNING\side-tuning\scripts\results\final_adapter.pth
+
+─────────────────────────────────────────────────────────────────
+  [FINETUNE]  Fine-tuning complet RN50  (lr=lr/10, cosine scheduler)
+  Trainable params : 23,512,130
+─────────────────────────────────────────────────────────────────
+  ✓ train=97.06%  val=87.55%  loss=0.0113  1585s
+  Checkpoint → C:\Users\user\Desktop\3A\0 - P2\APM583 Deep Learning\Project_SIDE-TUNING\side-tuning\scripts\results\final_finetune.pth
+
+─────────────────────────────────────────────────────────────────
+  [SIDETUNE]  Side-Tuning  RN50 + MLP + Large side  ← notre méthode
+  Trainable params : 2,931,458
+─────────────────────────────────────────────────────────────────
+  ✓ train=90.70%  val=85.60%  loss=0.0070  1129s
+  Checkpoint → C:\Users\user\Desktop\3A\0 - P2\APM583 Deep Learning\Project_SIDE-TUNING\side-tuning\scripts\results\final_sidetune.pth
+
+=================================================================
+  RÉSULTATS FINAUX  —  Train=50000 | Epochs=10
+=================================================================
+  Méthode         Val Acc  Train Acc  Val Loss     Params   Time
+  ────────────────────────────────────────────────────────────
+  adapter          88.40%     93.83%     0.0065     507,394   1026s ★
+  finetune         87.55%     97.06%     0.0113  23,512,130   1585s
+  sidetune         85.60%     90.70%     0.0070   2,931,458   1129s
+
+  ✅ Meilleure méthode : adapter  (88.40%)
+
+  JSON → C:\Users\user\Desktop\3A\0 - P2\APM583 Deep Learning\Project_SIDE-TUNING\side-tuning\scripts\results\final_results.json
+  Log  → C:\Users\user\Desktop\3A\0 - P2\APM583 Deep Learning\Project_SIDE-TUNING\side-tuning\scripts\results\final_log.txt

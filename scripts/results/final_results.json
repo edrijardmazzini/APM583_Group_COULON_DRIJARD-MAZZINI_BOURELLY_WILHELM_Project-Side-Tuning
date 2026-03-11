@@ -1,0 +1,35 @@
+[
+  {
+    "method": "adapter",
+    "description": "Adapter Layers  bottleneck=64  apr\u00e8s chaque stage RN50",
+    "val_acc": 88.4,
+    "val_loss": 0.00650274520739913,
+    "train_acc": 93.8306,
+    "n_params": 507394,
+    "epochs": 10,
+    "train_subset": 50000,
+    "time": 1026
+  },
+  {
+    "method": "finetune",
+    "description": "Fine-tuning complet RN50  (lr=lr/10, cosine scheduler)",
+    "val_acc": 87.55,
+    "val_loss": 0.011331921443343163,
+    "train_acc": 97.0616,
+    "n_params": 23512130,
+    "epochs": 10,
+    "train_subset": 50000,
+    "time": 1585
+  },
+  {
+    "method": "sidetune",
+    "description": "Side-Tuning  RN50 + MLP + Large side  \u2190 notre m\u00e9thode",
+    "val_acc": 85.6,
+    "val_loss": 0.006997855380177498,
+    "train_acc": 90.705,
+    "n_params": 2931458,
+    "epochs": 10,
+    "train_subset": 50000,
+    "time": 1129
+  }
+]

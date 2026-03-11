@@ -1,0 +1,82 @@
+[
+  {
+    "name": "side_small",
+    "description": "Side=Small  (~40k params)  | Base=RN18 | Merge=Alpha",
+    "val_acc": 79.3,
+    "val_loss": 0.007297942880541086,
+    "train_acc": 83.5515,
+    "n_params": 53699,
+    "alpha": 0.3803270161151886,
+    "time": 217
+  },
+  {
+    "name": "side_medium",
+    "description": "Side=Medium (~160k params) | Base=RN18 | Merge=Alpha  \u2190 r\u00e9f\u00e9rence",
+    "val_acc": 77.05,
+    "val_loss": 0.008310613222420216,
+    "train_acc": 84.08200000000001,
+    "n_params": 160323,
+    "alpha": 0.3697297275066376,
+    "time": 216
+  },
+  {
+    "name": "side_large",
+    "description": "Side=Large  (~600k params) | Base=RN18 | Merge=Alpha",
+    "val_acc": 81.55,
+    "val_loss": 0.00846826285123825,
+    "train_acc": 87.4485,
+    "n_params": 1094915,
+    "alpha": 0.3723221719264984,
+    "time": 396
+  },
+  {
+    "name": "merge_alpha",
+    "description": "Side=Medium | Base=RN18 | Merge=Alpha    (learnable scalar)  \u2190 r\u00e9f\u00e9rence",
+    "val_acc": 78.7,
+    "val_loss": 0.008097367361187935,
+    "train_acc": 84.31649999999999,
+    "n_params": 160323,
+    "alpha": 0.3969700038433075,
+    "time": 225
+  },
+  {
+    "name": "merge_mlp",
+    "description": "Side=Medium | Base=RN18 | Merge=MLP      (concat \u2192 non-linear)",
+    "val_acc": 83.7,
+    "val_loss": 0.0063576651737093925,
+    "train_acc": 85.553,
+    "n_params": 947778,
+    "alpha": null,
+    "time": 222
+  },
+  {
+    "name": "merge_product",
+    "description": "Side=Medium | Base=RN18 | Merge=Product  (element-wise \u2299)",
+    "val_acc": 81.3,
+    "val_loss": 0.00656540272757411,
+    "train_acc": 84.7075,
+    "n_params": 160322,
+    "alpha": null,
+    "time": 217
+  },
+  {
+    "name": "base_rn18",
+    "description": "Side=Medium | Base=ResNet-18 (512-d)   | Merge=Alpha  \u2190 r\u00e9f\u00e9rence",
+    "val_acc": 81.15,
+    "val_loss": 0.00730460649356246,
+    "train_acc": 84.43350000000001,
+    "n_params": 160323,
+    "alpha": 0.3591875433921814,
+    "time": 221
+  },
+  {
+    "name": "base_rn50",
+    "description": "Side=Medium | Base=ResNet-50 (2048\u2192512)| Merge=Alpha",
+    "val_acc": 82.5,
+    "val_loss": 0.0069703650660812855,
+    "train_acc": 85.374,
+    "n_params": 1209411,
+    "alpha": 0.2581075429916382,
+    "time": 278
+  }
+]

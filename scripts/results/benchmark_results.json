@@ -1,0 +1,65 @@
+[
+  {
+    "method": "features",
+    "description": "Base RN50 gel\u00e9 + Linear head",
+    "val_acc": 80.85,
+    "val_loss": 0.007238070014864206,
+    "train_acc": 81.913,
+    "n_params": 4098,
+    "time": 221
+  },
+  {
+    "method": "finetune",
+    "description": "Fine-tuning complet RN50",
+    "val_acc": 86.1,
+    "val_loss": 0.011914584785699844,
+    "train_acc": 95.85050000000001,
+    "n_params": 23512130,
+    "time": 441
+  },
+  {
+    "method": "sidetune",
+    "description": "Side-Tuning (RN50 + MLP + Large side)  \u2190 notre m\u00e9thode",
+    "val_acc": 82.65,
+    "val_loss": 0.0071362522430717945,
+    "train_acc": 88.417,
+    "n_params": 2931458,
+    "time": 406
+  },
+  {
+    "method": "lora",
+    "description": "LoRA  rank=8  sur toutes les Linear",
+    "val_acc": 81.60000000000001,
+    "val_loss": 0.007106602191925049,
+    "train_acc": 81.8885,
+    "n_params": 4098,
+    "time": 207
+  },
+  {
+    "method": "adapter",
+    "description": "Adapter Layers  bottleneck=64  apr\u00e8s chaque stage",
+    "val_acc": 86.65,
+    "val_loss": 0.006419977638870478,
+    "train_acc": 92.6195,
+    "n_params": 507394,
+    "time": 313
+  },
+  {
+    "method": "prompt_tuning",
+    "description": "Prompt Tuning  64 tokens  dim=256",
+    "val_acc": 81.65,
+    "val_loss": 0.006903507746756077,
+    "train_acc": 83.37400000000001,
+    "n_params": 672770,
+    "time": 204
+  },
+  {
+    "method": "bitfit",
+    "description": "BitFit  biais seuls entra\u00eenables",
+    "val_acc": 82.65,
+    "val_loss": 0.006658298894762993,
+    "train_acc": 85.832,
+    "n_params": 30658,
+    "time": 322
+  }
+]
